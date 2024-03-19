@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções data 2</title>
+    <script>
+
+        //24/07/1986
+        var data1 = new Date(1986, 6, 24)
+
+        var data2 = new Date(2024, 3, 4)
+
+        document.write(data1.toString())
+        document.write("<br/>")
+        document.write(data2.toString())
+
+        document.write("<br/><br/><br/><hr/>")
+
+        //Passo 1 Precisamos converter as datas de forma que possamos calcular elas
+        document.write(data1.getTime())
+        document.write("<br/>")
+        document.write(data2.getTime())
+        document.write("<br/>")
+
+        var milissegundos_entre_datas = Math.abs(data1.getTime() - data2.getTime())
+        document.write(milissegundos_entre_datas)
+
+        //Passo 2 encontrar quantidade de milissegundos entre data 1 e data 2
+        document.write(Math.abs(data1.getTime() - data2.getTime()))
+        document.write("<br/>")
+        // Um dia tem 24 horas e cada hora tem 60 minutos
+        // Uma hora tem 60 minutos e cada minuto tem 60 segundos
+        // Cada segundo tem 1000 milésimos e é que vamos precisar
+        var milissegundos_por_dia = (1*24*60*60*1000)
+        document.write('01 dia tem: '+ milissegundos_por_dia + ' Milissegundos.')
+        document.write("<br/><br/><br/><hr/>")
+        document.write("A diferença de dias é: " + Math.ceil(milissegundos_entre_datas/milissegundos_por_dia))
+        document.write("<br/>")
+
+        document.write("<br/><br/><br/><hr/>")
+        var data = new Date()
+
+        //adicionar// remover dias
+        document.write("Trabalhando com dias")
+        document.write("<br/>")
+        document.write(data.toString())
+        data.setDate(data.getDate() - 1)
+        document.write("<hr/>")
+        document.write(data.toString())
+        document.write("<br/><br/><hr/>")
+
+        // adicionar ou remover meses
+        document.write("Trabalhando com meses")
+        document.write("<br/>")
+        document.write(data.toString())
+        data.setMonth(data.getMonth() + 1)
+        document.write("<hr/>")
+        document.write(data.toString())
+        document.write("<br/><br/><hr/>")
+
+
+        // adicionar ou remover anos
+        document.write("Trabalhando com anos")
+        document.write("<br/>")
+        document.write(data.toString())
+        data.setFullYear(data.getFullYear() + 7)
+        document.write("<hr/>")
+        document.write(data.toString())
+        document.write("<br/><br/><hr/>")
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
