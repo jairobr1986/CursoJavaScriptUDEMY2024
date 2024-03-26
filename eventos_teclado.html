@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Teclado</title>
+    <script>
+
+        function acao1() {
+            alert("Evento disparado: onkeydown")
+        }
+        function acao2() {
+            alert("Evento disparado: onkeyup")
+        }function acao3() {
+            alert("Evento disparado: onkeypress")
+        }
+        
+
+    </script>
+    
+</head>
+<body>
+    <input onkeydown="acao1()" type="text" placeholder="onkeydown">
+    <br>
+    <br>
+    <input onkeyup="acao2()" type="text" placeholder="onkeyup">
+    <br><br>
+    <input onkeypress="acao3()" type="text" placeholder="onkeypress">
+    <br><br>
+
+</body>
+</html>
